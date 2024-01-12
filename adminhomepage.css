@@ -1,0 +1,73 @@
+
+
+body {
+    overflow: hidden;
+    background-color: rgba(46, 46, 101, 0.716);
+    font-family: 'Inter', sans-serif;
+    color: #fff; /* Change text color to white */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #3e3e92; /* Change sidebar background color */
+    padding: 0.8rem 0.4rem;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+.sidebar.active {
+    width: 270px;
+    background-color: rgba(46, 46, 101, 0.716);
+    transition: all 0.7s;
+}
+
+.sidebar #sidebarbtn {
+    position: absolute;
+    color: #fff;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.3rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.sidebar #sidebarbtn:hover {
+    font-size: 1.4rem;
+}
+
+.sidebar.active #sidebarbtn {
+    left: 85%;
+}
+
+.sidebar .top .logo {
+    color: #fff;
+}
+
+/* Main content styles */
+.main-content {
+    position: relative;
+    background-color: #d8d6eb;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+.main-content::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    opacity: 0.4;
+    background-repeat: none;
+    background-size: cover;
+}
